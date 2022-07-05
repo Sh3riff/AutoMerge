@@ -10,18 +10,18 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge development -> staging
+      - name: Merge main -> demoInstance
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: development
-          target_branch: staging
+          from_branch: main
+          target_branch: demoInstance
           github_token: ${{ github.token }}
 
-      - name: Merge staging -> uat
+      - name: Merge main -> testInstance
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: staging
-          target_branch: uat
+          from_branch: main
+          target_branch: testInstance
           github_token: ${{ github.token }}
