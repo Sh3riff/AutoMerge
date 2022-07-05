@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Merge main -> demoInstance
-        uses: devmasx/merge-branch@master
+        uses: devmasx/merge-branch@main
         with:
           type: now
           from_branch: main
@@ -19,7 +19,7 @@ jobs:
           github_token: ${{ github.token }}
 
       - name: Merge main -> testInstance
-        uses: devmasx/merge-branch@master
+        uses: devmasx/merge-branch@main
         with:
           type: now
           from_branch: main
